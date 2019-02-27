@@ -59,10 +59,10 @@ public class App {
         if (indexExists) {
             // delete existing index
             client.indices().delete(new DeleteIndexRequest(INDEX), RequestOptions.DEFAULT);
-            // create new index
-            String indexSource = Files.readString(new File(App.class.getClassLoader().getResource("trips_index.json").getFile()).toPath());
-            client.indices().create(new CreateIndexRequest("trips").source(indexSource, XContentType.JSON), RequestOptions.DEFAULT);
         }
+        // create new index
+        String indexSource = Files.readString(new File(App.class.getClassLoader().getResource("trips_index.json").getFile()).toPath());
+        client.indices().create(new CreateIndexRequest("trips").source(indexSource, XContentType.JSON), RequestOptions.DEFAULT);
 
         int idx = -1; // document ID
         BulkRequest bulkRequest = new BulkRequest();
