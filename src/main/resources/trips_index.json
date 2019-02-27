@@ -9,11 +9,11 @@
         "type": "integer"
       },
       "start_time": {
-        "type": "date_nanos",
+        "type": "date",
         "format": "yyyy-MM-dd HH:mm:ss.SSSS"
       },
       "end_time": {
-        "type": "date_nanos",
+        "type": "date",
         "format": "yyyy-MM-dd HH:mm:ss.SSSS"
       },
       "start_station_id": {
