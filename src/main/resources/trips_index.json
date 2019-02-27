@@ -1,0 +1,57 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0
+  },
+  "mappings": {
+    "properties": {
+      "duration_sec": {
+        "type": "integer"
+      },
+      "start_time": {
+        "type": "date_nanos",
+        "format": "yyyy-MM-dd HH:mm:ss.SSSS"
+      },
+      "end_time": {
+        "type": "date_nanos",
+        "format": "yyyy-MM-dd HH:mm:ss.SSSS"
+      },
+      "start_station_id": {
+        "type": "long",
+        "ignore_malformed": true
+      },
+      "start_station_name": {
+        "type": "keyword"
+      },
+      "start_station_location": {
+        "type": "geo_point"
+      },
+      "end_station_id": {
+        "type": "long",
+        "ignore_malformed": true
+      },
+      "end_station_name": {
+        "type": "keyword"
+      },
+      "end_station_location": {
+        "type": "geo_point"
+      },
+      "bike_id": {
+        "type": "long"
+      },
+      "user_type": {
+        "type": "keyword"
+      },
+      "member_birth_year": {
+        "type": "date",
+        "format": "yyyy"
+      },
+      "member_gender": {
+        "type": "keyword"
+      },
+      "bike_share_all_day": {
+        "type": "keyword"
+      }
+    }
+  }
+}
